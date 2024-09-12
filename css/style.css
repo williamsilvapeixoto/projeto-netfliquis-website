@@ -1,0 +1,174 @@
+@charset "UTF-8";
+
+@keyframes seta{
+    from{
+        left: 0;
+    }
+    to{
+        left: 30px;
+    }
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    padding: 20px;
+    background-color: rgb(14, 14, 14);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+header .logo img{
+    width: 100px;
+}
+
+header .navbar > ol{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    max-width: 400px;
+}
+
+header ol > li a{
+    background-color: rgba(128, 128, 128, 0.479);
+    padding: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition-duration: .3s;
+    font-size: 1.1em;
+}
+
+header ol > li a:hover{
+    text-decoration: underline;
+    padding: 10px;
+}
+
+h1, h2, p, a{
+    color: rgb(233, 233, 233);
+}
+
+main{
+    padding: 50px 0;
+}
+
+main .plano-principal{
+    margin: 0 -20px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .plano-principal h1{
+    font-size: 1.6em;
+    padding:  0 20px 20px 20px;
+}
+
+.plano-principal .plano{
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    background: rgba(0, 0, 0, 0.692);
+    margin: 35px;
+    padding: 20px 20px 0 20px;
+    border-radius: 10px;
+    color: rgb(233, 233, 233);
+}
+
+.plano ul li{
+    margin: 15px;
+}
+
+main .plano-principal a{
+    background-color: red;
+    font-size: 1.1em;
+    padding: 10px;
+    margin: 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    align-self: center;
+    box-sizing: border-box;
+}
+
+main .plano-principal a:hover{
+    background: transparent;
+    color: red;
+    border: solid 3px red;
+    margin: 27px;
+}
+
+.plano-principal div.img{
+    background:url('../img/Netflix-na-tela-700x394.jpg');
+    background-size: cover;
+    background-position: right center;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    top: 0;
+}
+
+main > .plano-principal div.img::before{
+    content: '';
+    position: absolute;
+    background: linear-gradient(to bottom, rgb(14, 14, 14), rgba(0,0,0, 0.5), rgb(14, 14, 14));
+    height: 100%;
+    width: 100%;
+}
+
+section.servicos div h2{
+    font-size: 1.6em;
+    padding-bottom: 30px;
+}
+
+section.servicos div p{
+    margin: 10px;
+}
+
+section.servicos div.img > img{
+    width: 100%;
+    padding: 10px 0;
+}
+
+section.filmes{
+    padding-top: 30px;
+    width: 100%;
+}
+
+section.slide-filmes{
+    max-width: 100%;
+    overflow-x: scroll;
+    margin: 30px 0 0 0;
+    position: relative;
+}
+
+section.filmes::after{
+    content: '→';
+    position: absolute;
+    color: white;
+    bottom: -1535px;
+    animation: seta 1s both infinite alternate;
+}
+
+section.slide-filmes::-webkit-scrollbar{
+    display: none;
+}
+
+footer{
+    background: rgb(80, 80, 80);
+    margin: 30px -20px -20px -20px;
+    padding: 40px;
+    text-align: center;
+    font-size: 1.3em;
+}
