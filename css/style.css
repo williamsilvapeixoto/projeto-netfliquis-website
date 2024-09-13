@@ -35,7 +35,7 @@ header .logo img{
 header .navbar > ol{
     list-style: none;
     display: flex;
-    gap: 25px;
+    gap: 10px;
     max-width: 400px;
 }
 
@@ -45,7 +45,7 @@ header ol > li a{
     border-radius: 8px;
     text-decoration: none;
     transition-duration: .3s;
-    font-size: 1.1em;
+    font-size: 0.9em;
 }
 
 header ol > li a:hover{
