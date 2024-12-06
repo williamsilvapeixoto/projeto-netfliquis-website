@@ -20,6 +20,9 @@ body{
     padding: 20px;
     background-color: rgb(14, 14, 14);
 }
+main .servicos div.img{
+    max-width: 550px;
+}
 
 header{
     display: flex;
